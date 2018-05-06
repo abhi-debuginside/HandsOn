@@ -37,7 +37,7 @@ export class TodoListComponentComponent implements OnInit {
   onRemoveTodo(todo: Todo) {
     console.log('onRemoveTodo - list ' + todo.title + ' current status ' + todo.complete);
 
-    this.todos = this.todoService.deleteFromList(todo, this.todos);
+    this.todos = this.todoService.deleteFromList(todo);
     console.log('onRemoveTodo - list ' + todo.title + ' current status ' + todo.complete);
 
     this.remove.emit(todo);
